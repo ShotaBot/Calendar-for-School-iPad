@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カレンダーアプリ</title>
+    <style>
+        body {
+            font-family: Arai, sans-serif;
+        }
+        #calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin: 20px 0;
+        }
+        .day {
+            border: 1px solid #ccc;
+            height: 100px;
+            position: relative;
+            text-align: center;
+        }
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        #eventForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>カレンダーアプリ</h1>
+    <button id="prevMonthButton">前月</button>
+    <button id="nextMonthButton">次月</button>
+    <h2 id="monthYear"></h2>
+    <div id="calendar"></div>
+    
+    <div id="eventForm">
+        <input type="text" id="eventTitle" placeholder="イベント名">
+        <input type="color" id="eventColor">
+        <button id="addEventButton">イベントを追加</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
